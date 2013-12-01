@@ -1,7 +1,23 @@
 package control;
 
-import javax.swing.JFrame;
+import repositorio.SalvarDados;
 
-public class Erros extends JFrame{
+public class Erros {
+	SalvarDados procurarDados = new SalvarDados();
+	
+	public void dados(SalvarDados dados){
+		
+			
+		
+	}
+	
+	public static void main(String[] args) {
+
+		
+		
+		
+		
+		
+	}
 
 }

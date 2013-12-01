@@ -17,10 +17,13 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 import model.Aluno;
+import model.Pessoa;
 import repositorio.SalvarDados;
+import start.Start;
 
 public class ViewCadastro extends JPanel {
-
+	
+	Pessoa dadosPessoa = new Pessoa();
 	Aluno dadosAluno = new Aluno();
 	SalvarDados dadosSalvos = new SalvarDados();
 
@@ -452,12 +455,18 @@ public class ViewCadastro extends JPanel {
 			if(e.getSource()==btnCadastrar){
 				
 				dadosAluno.setNome(tfnomeC.getText());
+				dadosAluno.setEndereco(tfenderecoC.getText());
+				dadosAluno.setEmail(tfEmailC.getText());
+				dadosAluno.setSenha(tfSenhaC.getText());
+				dadosAluno.setCpf(Integer.parseInt(tfCpf.getText()));
+				dadosAluno.setTelefone(Integer.parseInt(tfTelefone.getText()));
+				dadosAluno.setNomeDaMae(tfnomeDaMaeC.getText());
+				
 				
 				JOptionPane.showMessageDialog(null,"Dados Cadastrados Com Sucesso !!");
-				JOptionPane.showMessageDialog(null,dadosAluno.getNome());
-//				dadosSalvos.salvamento();
-//				 dadosSalvos.retornarAluno();
 				
+			 dadosSalvos.salvamento(dadosAluno);
+				dadosSalvos.retornarAluno();
 			}
 			
 

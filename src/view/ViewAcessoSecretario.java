@@ -8,6 +8,9 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.border.EmptyBorder;
 
+import repositorio.SalvarDados;
+import java.awt.Dialog.ModalExclusionType;
+
 public class ViewAcessoSecretario extends JFrame {
 
 	private JPanel contentPane;
@@ -15,10 +18,10 @@ public class ViewAcessoSecretario extends JFrame {
 	
 
 	public ViewAcessoSecretario() {
-		setTitle("Painel Secretario");
-		setLayout(null);
-		
+		setModalExclusionType(ModalExclusionType.APPLICATION_EXCLUDE);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setTitle("Painel Secretario");
+		getContentPane().setLayout(null);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -43,6 +46,9 @@ public class ViewAcessoSecretario extends JFrame {
 	}
 	
 	public static void main(String[] args) {
+		SalvarDados dadosSalvos = new SalvarDados();
+		dadosSalvos.retornarAluno();
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {

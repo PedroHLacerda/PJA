@@ -5,7 +5,6 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Toolkit;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -13,10 +12,13 @@ import javax.swing.JTabbedPane;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
+import repositorio.SalvarDados;
+
 public class MainView extends JFrame {
 
 	private JPanel contentPane;
 	private JTabbedPane abas;
+	
 	
 	
 	public MainView() {
@@ -59,6 +61,8 @@ public class MainView extends JFrame {
 	
 	
 	public static void main(String[] args) {
+		
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {

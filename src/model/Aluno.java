@@ -1,5 +1,7 @@
 package model;
 
+import repositorio.SalvarDados;
+
 public class Aluno extends Pessoa {
 	
   private String nomeDaMae;
@@ -56,8 +58,14 @@ public class Aluno extends Pessoa {
 	 
 	 
 	 
+	
+	public String toString() {
+		
+		return "nome: "+getNome()+"\n email: "+getEmail()+"\n senha: "+getSenha()+"\n Endereco: "+getEndereco()+"\n cargo: "+getCargo()+"\n telefone: "+getTelefone()+
+				"\n cpf: "+getCpf();
+	}
 	 
 	 
-	 
+	
 	 
 }
